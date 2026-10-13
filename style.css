@@ -24,7 +24,7 @@ html{-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--f-text);font-size:17px;line-height:1.95;font-feature-settings:"palt" 0}
 a{color:var(--brassT);text-underline-offset:3px}
 a:focus-visible,button:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
-img{max-width:100%;display:block}
+img{max-width:100%;height:auto;display:block}   /* keep the picture's own proportions when its width is limited */
 .num{font-family:var(--f-num);font-variant-numeric:tabular-nums}
 
 /* the overhead line: a single cable runs down the left edge and every section hangs a tag on it */
@@ -49,7 +49,7 @@ h1 small{display:block;font-size:.36em;font-weight:400;letter-spacing:.06em;marg
 .btn.solid{background:var(--ink);border-color:var(--ink);color:var(--bg)}
 .btn.solid:hover{background:var(--brassT);border-color:var(--brassT)}
 .btn[aria-disabled=true]{opacity:.55;pointer-events:none}
-.phone{justify-self:center;width:min(300px,100%);border-radius:34px;overflow:hidden;border:6px solid var(--ink);background:var(--ink)}
+.phone{justify-self:center;width:min(300px,100%);aspect-ratio:1320/2868;object-fit:cover;border-radius:34px;overflow:hidden;border:6px solid var(--ink);background:var(--ink)}
 
 /* the readout: a strip of numbers like the factory's own meters */
 .meters{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-top:1px solid var(--line);border-bottom:1px solid var(--line);margin:48px 0 0}
